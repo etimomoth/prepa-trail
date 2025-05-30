@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Volume Total Hebdomadaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="plan_entrainement_trail.html">Plan Trail</a>
+  <a href="volume_total.html">Volume Total</a>
+  <a href="volume_chaussures.html">Volume Chaussures</a>
+</nav>
+<main>
+  <h1>Volume Hebdomadaire de Course à Pied</h1>
+  <canvas id="volumeChart" width="600" height="400"></canvas>
+  <div style="margin-top: 20px;">
+    <h3>Légende</h3>
+    <ul>
+      <li><span style="background-color: #f39c12; padding: 4px 10px; margin-right: 5px;">&nbsp;</span>Deload</li>
+      <li><span style="background-color: #e74c3c; padding: 4px 10px; margin-right: 5px;">&nbsp;</span>Pic de charge</li>
+      <li><span style="background-color: #2ecc71; padding: 4px 10px; margin-right: 5px;">&nbsp;</span>Semaine Trail</li>
+      <li><span style="background-color: #9b59b6; padding: 4px 10px; margin-right: 5px;">&nbsp;</span>Affûtage</li>
+    </ul>
+  </div>
+</main>
+<footer>
+  Préparation générée avec Coach GPT – 2025
+</footer>
+<script>
+  const ctx = document.getElementById('volumeChart').getContext('2d');
+  const colors = ['#3498db', '#2ecc71', '#2ecc71', '#e74c3c', '#f39c12', '#e74c3c', '#e74c3c', '#9b59b6', '#2ecc71'];
+  const volumeChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['S0', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'],
+      datasets: [{
+        label: 'Kilométrage hebdomadaire',
+        data: [25, 28, 30, 32, 26, 30, 32, 24, 34],
+        backgroundColor: colors
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Volume de Course par Semaine'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Kilomètres'
+          }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>

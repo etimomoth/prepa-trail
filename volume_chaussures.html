@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Volume par Chaussure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="plan_entrainement_trail.html">Plan Trail</a>
+  <a href="volume_total.html">Volume Total</a>
+  <a href="volume_chaussures.html">Volume Chaussures</a>
+</nav>
+<main>
+  <h1>Volume de Course par Chaussure</h1>
+  <canvas id="chaussuresChart" width="600" height="400"></canvas>
+</main>
+<footer>
+  Préparation générée avec Coach GPT – 2025
+</footer>
+<script>
+  const ctx = document.getElementById('chaussuresChart').getContext('2d');
+  const chaussuresChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['S0', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'],
+      datasets: [
+        {
+          label: 'Glycerin 22',
+          data: [20, 6, 6, 6, 5, 6, 0, 6, 4],
+          backgroundColor: '#3498db'
+        },
+        {
+          label: 'Hierro V8',
+          data: [5, 22, 24, 26, 21, 24, 32, 18, 30],
+          backgroundColor: '#2ecc71'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Volume Hebdomadaire par Modèle de Chaussure'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Kilomètres' }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>

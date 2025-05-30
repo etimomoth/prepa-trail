@@ -1,0 +1,199 @@
+/* Style pour le plan d'entraînement trail */
+body {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #3498db;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.4em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.week-container {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #3498db;
+}
+
+.week-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.week-title {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.week-volume {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.objective {
+    background-color: #e8f4fc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 3px solid #3498db;
+}
+
+.program {
+    margin-bottom: 20px;
+}
+
+.day {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.day-name {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.explanation {
+    background-color: #f0f7fb;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border-left: 3px solid #5dade2;
+}
+
+.explanation h4 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.explanation ul {
+    margin-bottom: 10px;
+}
+
+.conclusion {
+    font-style: italic;
+    margin-top: 10px;
+    color: #555;
+}
+
+.reminders {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    border: 1px solid #e9ecef;
+}
+
+.reminders h3 {
+    color: #e74c3c;
+    margin-top: 0;
+}
+
+.reminders ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.reminders li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.reminders li:last-child {
+    border-bottom: none;
+}
+
+.reminders li:before {
+    content: "💡 ";
+}
+
+.shoe {
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+.distance {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.intensity {
+    font-style: italic;
+    color: #d35400;
+}
+
+.renfo {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .week-container {
+        page-break-inside: avoid;
+    }
+}

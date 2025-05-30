@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volume par Chaussure - Plan d'Entraînement Trail</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/style.css" rel="stylesheet"/>
+<style>
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 30px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .nav-menu a {
+            margin: 0 15px;
+            padding: 8px 15px;
+            color: #3498db;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .graph-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .graph-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .graph-explanation {
+            background-color: #f0f7fb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 3px solid #3498db;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px 10px;
+        }
+        
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+        
+        .hierro {
+            background-color: #2ecc71;
+        }
+        
+        .glycerin {
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+<nav style="padding: 1em; background-color: #f0f0f0; font-family: sans-serif;">
+<a href="index.html" style="margin-right: 1em;">Accueil</a>
+<a href="plan_entrainement_trail.html" style="margin-right: 1em;">Plan Trail</a>
+<a href="volume_total.html" style="margin-right: 1em;">Volume Total</a>
+<a href="volume_chaussures.html">Volume Chaussures</a>
+</nav>
+<hr/>
+
+<div class="container">
+<header>
+<h1>Plan d'Entraînement Trail 30 km / 900D+</h1>
+<p>Objectif : Course du 26 juillet 2025</p>
+</header>
+<div class="nav-menu">
+<a href="../index.html">Plan Principal</a>
+<a href="volume_total.html">Volume Hebdomadaire</a>
+<a class="active" href="volume_chaussures.html">Volume par Chaussure</a>
+<a href="../renfo/index.html">Séances de Renforcement</a>
+</div>
+<h2>Répartition du Volume par Type de Chaussure</h2>
+<div class="graph-container">
+<img alt="Graphique du volume par type de chaussure" src="../graphs/volume_chaussures.png"/>
+</div>
+<div class="legend">
+<div class="legend-item">
+<div class="color-box hierro"></div>
+<span>Hierro (Trail)</span>
+</div>
+<div class="legend-item">
+<div class="color-box glycerin"></div>
+<span>Glycerin (Route)</span>
+</div>
+</div>
+<div class="graph-explanation">
+<h3>Analyse de la Répartition</h3>
+<p>Ce graphique montre la répartition du volume d'entraînement entre tes deux paires de chaussures :</p>
+<ul>
+<li><strong>Hierro</strong> : Utilisées principalement pour les sorties trail et les longues sorties du dimanche, avec une augmentation progressive du kilométrage.</li>
+<li><strong>Glycerin</strong> : Utilisées pour les sorties route en semaine, avec un volume relativement stable.</li>
+</ul>
+<p>Points clés à noter :</p>
+<ul>
+<li>La proportion de volume en Hierro augmente progressivement pour préparer tes pieds aux spécificités du trail.</li>
+<li>Les semaines allégées (S3 et S6) maintiennent un équilibre entre les deux types de chaussures.</li>
+<li>La semaine de course (S8) est entièrement en Hierro, pour une adaptation complète avant l'événement.</li>
+</ul>
+<p>Cette stratégie permet d'habituer progressivement tes pieds aux Hierro tout en maintenant un volume de base confortable en Glycerin pour les sorties route.</p>
+</div>
+<footer>
+<p>Plan d'entraînement trail 30 km / 900D+ - Préparé pour la course du 26 juillet 2025</p>
+</footer>
+</div>
+</body>
+</html>

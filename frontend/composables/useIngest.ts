@@ -1,18 +1,28 @@
 import type { JobOut } from '~/types/api'
 
 export function useIngest() {
-  const { request, base } = useApi()
+  const { base } = useApi()
   const job = ref<JobOut | null>(null)
   const error = ref<string | null>(null)
+  const uploading = ref(false)
 
-  async function start(folder: string, recursive = true) {
+  async function uploadFiles(files: File[]) {
     error.value = null
-    const res = await request<{ job_id: number; scheduled: number }>('/ingest', {
-      method: 'POST',
-      body: JSON.stringify({ folder, recursive }),
-    })
-    follow(res.job_id)
-    return res
+    uploading.value = true
+    try {
+      const form = new FormData()
+      for (const f of files) form.append('files', f, f.name)
+      const res = await fetch(`${base}/ingest/upload`, { method: 'POST', body: form })
+      if (!res.ok) throw new Error(`${res.status} ${await res.text()}`)
+      const data = (await res.json()) as { job_id: number; scheduled: number }
+      follow(data.job_id)
+      return data
+    } catch (e) {
+      error.value = (e as Error).message
+      throw e
+    } finally {
+      uploading.value = false
+    }
   }
 
   function follow(jobId: number) {
@@ -27,5 +37,5 @@ export function useIngest() {
     })
   }
 
-  return { job, error, start, follow }
+  return { job, error, uploading, uploadFiles, follow }
 }

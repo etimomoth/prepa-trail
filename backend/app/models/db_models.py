@@ -31,7 +31,11 @@ class Photo(Base):
     scene: Mapped[str | None] = mapped_column(String(128))
 
     cluster_id: Mapped[int | None] = mapped_column(ForeignKey("clusters.id"), index=True)
-    cluster: Mapped["Cluster | None"] = relationship("Cluster", back_populates="photos")
+    cluster: Mapped["Cluster | None"] = relationship(
+        "Cluster",
+        back_populates="photos",
+        foreign_keys="Photo.cluster_id",
+    )
 
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
 

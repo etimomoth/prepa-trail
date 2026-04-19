@@ -1,0 +1,43 @@
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Frontend / Node
+node_modules/
+.nuxt/
+.output/
+.nitro/
+.cache/
+dist/
+*.log
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Local data
+data/
+!data/.gitkeep
+backend/tests/_tmp/
+
+# Models / caches
+*.pt
+*.bin
+*.onnx
